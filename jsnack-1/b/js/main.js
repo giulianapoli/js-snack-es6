@@ -4,7 +4,10 @@ let palla = {
 };
 console.log(palla);
 
-let inputUser = prompt("Inserisci il peso della palla.");
+let weight = "peso";
+let ball = "palla";
+
+let inputUser = prompt(`Inserisci il ${weight} della ${ball}.`);
 console.log(inputUser);
 
 palla.peso = inputUser;
