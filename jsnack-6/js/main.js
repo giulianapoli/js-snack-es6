@@ -17,16 +17,18 @@ var arrayObj = [
 ];
 
 const alphabet = "abcdefghijklmnopqrstuvwxyz";
-const randomCharacter = alphabet[Math.floor(Math.random() * alphabet.length)];
-console.log(randomCharacter);
+
 
 // creo la funzione che duplica array
-const map1 = arrayObj.map(function(arrayObj) {
-  return arrayObj;
+const map1 = arrayObj.map(function(element) {
+  const randomCharacter = alphabet[Math.floor(Math.random() * alphabet.length)];
 
+  let item = {
+    ...element,
+    position: randomCharacter
+  };
+
+  return item;
 });
 console.log(map1);
-console.log(arrayObj);
-
-arrayObj.position = "value3";
 console.log(arrayObj);

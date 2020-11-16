@@ -10,11 +10,27 @@ console.log(myArray.length);
 let inputUser1 = parseInt(prompt(`Inserisci un numero compreso tra 0 e ${myArray.length-1}`));
 let inputUser2 = parseInt(prompt(`Inserisci un numero compreso tra 0 e ${myArray.length-1}`));
 
-var newArr = [];
 
-for (let i = inputUser1; i <= inputUser2; i++) {
+/*
+myArray.forEach((element, index) => {
+  if ((index > inputUser1) && (index < inputUser2)) {
+    newArr.push(element);
+  }
 
-  let nomi = myArray[i];
-  newArr.push(nomi);
-}
-console.log(newArr);
+});*/
+
+var newArr = myArray.filter((element, index) => {
+  return ((index > inputUser1) && (index < inputUser2));
+});
+
+
+
+
+
+
+// for (let i = inputUser1; i <= inputUser2; i++) {
+//
+//   let nomi = myArray[i];
+//   newArr.push(nomi);
+// }
+// console.log(newArr);
